@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/whitesqbr">
+    <LinearLayout
+        android:id="@+id/Team_Layout"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:text="Choose Team"
+            android:textSize="15sp" />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="12dp"
+            android:id="@+id/closebutton"
+            android:layout_gravity="right"
+            android:src="@drawable/close"
+            android:tint="@color/aaa" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="49dp"
+            android:background="@color/aaa" />
+    </FrameLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/whitesqbr">
+        <EditText
+            android:id="@+id/Search_player"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Search team"
+            android:textSize="14sp"
+            android:paddingLeft="5dp"
+            android:paddingRight="50dp"
+            android:inputType="text"
+            android:maxLength="30"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/aaa"
+            android:backgroundTint="@color/transparent" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="12dp"
+            android:visibility="gone"
+            android:id="@+id/searchclose"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/close"
+            android:tint="@color/aaa" />
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Filter Game"
+        android:layout_weight="1"
+        android:textColor="@color/black"
+        android:gravity="center|left"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:inputType="textPersonName"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/down"
+            android:tint="@color/black"
+            android:padding="12dp"
+            android:layout_alignParentRight="true"/>
+        <TextView
+            android:id="@+id/Select_Game"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Select Game"
+            android:text="ALL"
+            android:textColor="@color/black"
+            android:gravity="center|right"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:inputType="textPersonName"
+            android:paddingLeft="8dp"
+            android:paddingRight="38dp"/>
+    </RelativeLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/aaa" />
+        <ListView
+            android:id="@+id/Listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Team_selected"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                android:text="Select Players"
+                android:textSize="15sp" />
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/back"
+                android:tint="@color/black"
+                android:id="@+id/Backbutton"
+                android:padding="12dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="49dp"
+                android:background="@color/aaa" />
+        </FrameLayout>
+    <ScrollView
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/defaultimg"
+                android:id="@+id/player_image" />
+            <TextView
+                android:text="Player Name"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:paddingLeft="78dp"
+                android:id="@+id/player_name"
+                android:textSize="16dp"
+                android:maxLines="2"
+                android:textStyle="bold"
+                android:gravity="center|left"
+                android:textColor="@color/black"/>
+            <TextView
+                android:text="Player Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="78dp"
+                android:layout_below="@+id/player_name"
+                android:id="@+id/player_position"
+                android:textSize="13dp"
+                android:maxLines="1"
+                android:textStyle="bold"
+                android:gravity="center|left"
+                android:textColor="@color/aaa"/>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:text="Select Players who going to play for your team"
+            android:textSize="15sp" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/Players_Listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:scrollbars="vertical" />
+    </LinearLayout>
+    </ScrollView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/ErrorMessage"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:minHeight="20dp"
+            android:visibility="gone"
+            android:textColor="@color/red" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/buttonbg"
+            android:text="Submit"
+            android:id="@+id/Submit"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textAllCaps="false" />
+    </LinearLayout>
+</LinearLayout>

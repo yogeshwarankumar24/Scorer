@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:id="@+id/Layout_main"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/Header">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Midnight Night Game"
+                android:id="@+id/Headertext"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:paddingRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/black" />
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/undo"
+                android:tint="@color/black"
+                android:id="@+id/Undobutton"
+                android:layout_toRightOf="@id/Headertext"
+                android:layout_gravity="right"
+                android:padding="12dp" />
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/redo"
+                android:tint="@color/black"
+                android:id="@+id/Redobutton"
+                android:layout_toRightOf="@id/Undobutton"
+                android:layout_gravity="right"
+                android:padding="12dp" />
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/home"
+                android:tint="@color/black"
+                android:id="@+id/Homebutton"
+                android:layout_toRightOf="@id/Redobutton"
+                android:layout_gravity="right"
+                android:padding="12dp" />
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/swap"
+                android:tint="@color/black"
+                android:id="@+id/Swapbutton"
+                android:layout_toRightOf="@id/Homebutton"
+                android:layout_gravity="right"
+                android:padding="12dp" />
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/menu"
+                android:tint="@color/black"
+                android:id="@+id/Menubutton"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="right"
+                android:padding="12dp" />
+        </RelativeLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Team 1"
+                            android:id="@+id/Team1_name"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:layout_marginLeft="50dp"
+                            android:textColor="@color/black" />
+                        <ImageView
+                            android:id="@+id/Team_image1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/teamicon"
+                            android:padding="5dp" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Team 2"
+                            android:id="@+id/Team2_name"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:layout_marginLeft="50dp"
+                            android:textColor="@color/black" />
+                        <ImageView
+                            android:id="@+id/Team_image2"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/teamicon"
+                            android:padding="5dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4">
+                    <GridView
+                        android:id="@+id/ScoreGridview"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:columnWidth="70dp"
+                        android:gravity="center"
+                        android:numColumns="auto_fit"
+                        android:horizontalSpacing="1dp"
+                        android:verticalSpacing="1dp"
+                        android:stretchMode="columnWidth" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <TextView
+                    android:id="@+id/Score1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="15"
+                    android:textSize="35dp"
+                    android:paddingRight="15dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:id="@+id/Scorepoints"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="3-1"
+                    android:textSize="30dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:id="@+id/Score2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="45"
+                    android:textSize="35dp"
+                    android:paddingLeft="15dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Team 1"
+                        android:id="@+id/Team1text"
+                        android:textSize="18sp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@color/black" />
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Team 2"
+                        android:layout_weight="1"
+                        android:id="@+id/Team2text"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:textColor="@color/black" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="12dp">
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="ADD SCORE"
+                        android:textSize="18dp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:id="@+id/Team1Addscore"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/button"
+                        android:textColor="@color/white" />
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="ADD SCORE"
+                        android:textSize="18dp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:id="@+id/Team2Addscore"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/button"
+                        android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_gravity="right|end"
+        android:background="@color/white"
+        android:id="@+id/MenuLeft"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <include layout="@layout/scoremenu"/>
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Scorer</string>
+
+
+    <string name="crop__saving">Saving picture…</string>
+    <string name="crop__wait">Please wait…</string>
+    <string name="crop__pick_error">No image sources available</string>
+    <string name="crop__done">Done</string>
+    <string name="crop__cancel" tools:ignore="ButtonCase">Cancel</string>
+
+    <string name="facebook_app_id">190994328337697</string>
+    <string name="fb_login_protocol_scheme">fb190994328337697</string>
+
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="default_notification_channel_name" translatable="true">Scorer</string>
+</resources>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/Header"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Scorer"
+            android:id="@+id/Headertext"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/menu"
+            android:tint="@color/black"
+            android:id="@+id/Menubutton"
+            android:padding="12dp" />
+    </FrameLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/recentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Played recently"
+                android:textSize="16dp"
+                android:gravity="center|left"
+                android:paddingLeft="8dp"
+                android:background="@color/white"
+                android:textColor="@color/black" />
+            <com.scorer.Widgets.ExpandableHeightGridView
+                android:id="@+id/recentmenulistview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:columnWidth="200dp"
+                android:gravity="center"
+                android:numColumns="auto_fit"
+                android:horizontalSpacing="1dp"
+                android:verticalSpacing="1dp"
+                android:stretchMode="columnWidth" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="More games"
+                android:textSize="16dp"
+                android:gravity="center|left"
+                android:paddingLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:textColor="@color/black" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.scorer.Widgets.ExpandableHeightGridView
+                android:id="@+id/menulistview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:columnWidth="200dp"
+                android:gravity="center"
+                android:numColumns="auto_fit"
+                android:horizontalSpacing="1dp"
+                android:verticalSpacing="1dp"
+                android:layout_marginBottom="5dp"
+                android:stretchMode="columnWidth" />
+        </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_gravity="left|start"
+        android:background="@color/white"
+        android:id="@+id/MenuLeft"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <ListView
+            android:id="@+id/Menubarlist"
+            android:background="@color/white"
+            android:dividerHeight="0dp"
+            android:divider="@color/transparent"
+            android:listSelector="@android:color/transparent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>

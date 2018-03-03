@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.scorer.MainActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Not Available\nComming Soon"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:id="@+id/commingsoon"
+        android:layout_centerInParent="true"/>
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/home"
+        android:tint="@color/black"
+        android:id="@+id/Homebutton"
+        android:layout_marginTop="50dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/commingsoon"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click to Home"
+        android:textSize="10dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_below="@id/Homebutton"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

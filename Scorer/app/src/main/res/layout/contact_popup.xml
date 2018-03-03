@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/whitesqbr">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:text="Choose Contacts"
+            android:textSize="15sp" />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="12dp"
+            android:id="@+id/closebutton"
+            android:layout_gravity="right"
+            android:src="@drawable/close"
+            android:tint="@color/aaa" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/aaa" />
+    </FrameLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/whitesqbr">
+        <EditText
+            android:id="@+id/Search_contact"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Search Contacts"
+            android:textSize="14sp"
+            android:paddingLeft="5dp"
+            android:paddingRight="50dp"
+            android:inputType="text"
+            android:maxLength="30"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/aaa"
+            android:backgroundTint="@color/transparent" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="12dp"
+            android:visibility="gone"
+            android:id="@+id/searchclose"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/close"
+            android:tint="@color/aaa" />
+    </RelativeLayout>
+        <ListView
+            android:id="@+id/Listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"/>
+</LinearLayout>
